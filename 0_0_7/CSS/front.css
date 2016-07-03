@@ -1,0 +1,97 @@
+.active_btn{
+ background:red !important; 
+}
+body{
+  margin:0 auto;
+  background:gainsboro;
+  background: -webkit-linear-gradient(top, gainsboro , gray);
+}
+*{
+  font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+#app{
+  text-align:center;
+  display:block;
+  width:100vw;
+  max-width:100%;
+}
+@media (max-width: 600px) {
+  * {
+    font-size:5vw;
+  }
+  input[type=number]{
+  width:24vw;
+  }
+}
+#message_wrap{
+  background:#4f5955;
+  color:white;
+  width:100%;
+}
+#message_area{
+  padding:2vh;
+  overflow-x:auto;
+  text-align:left;
+}
+#wrap{
+  text-align:center;
+  max-width:1000px;
+  width:90%;
+  margin:0 auto;
+  box-shadow:5px 5px 50px black;
+}
+.menu_top{
+  border:5px solid #4f5955;
+  margin:0 auto;
+  min-height: 1.75em;
+  background:#B7B7B7;
+}/*better classes here*/
+.menu_bottom{
+  border:5px solid #4f5955;
+  margin:0 auto;
+  min-height: 3.5em;
+  background:#B7B7B7;
+}
+.dark_btn{
+text-align:center;
+display:inline-block;
+min-width: 6vw;
+padding:0.5vh;
+background:gray;
+color:white;
+transition:background 1s;
+-webkit-user-select: none;  /* Chrome all / Safari all */
+-moz-user-select: none;     /* Firefox all */
+-ms-user-select: none;      /* IE 10+ */
+user-select: none;          /* Likely future */  
+}
+#logo{
+  max-width:15vw;
+  -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));
+    filter: url(#drop-shadow);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
+.dark_btn:hover{
+   background: red;
+}
+.public_key{
+ color:red; 
+}
+.destruct_msg{
+  color:red;
+}
+input[type=number]{
+  width:7vw;
+}
+.footer_link:hover{
+  color:red;
+}
+.flip{
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}

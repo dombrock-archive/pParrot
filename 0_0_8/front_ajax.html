@@ -1,0 +1,36 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="CSS/front.css">
+<p>
+<div id="app">
+  <!--<img class="logo" src="pparrot.svg">-->
+  <img id="logo" src="IMG/pParrot.png">
+  <div id="wrap">
+    <div id="select" class="menu_top">
+      <div id="start_write_btn" class="dark_btn">Write</div>
+      <div id="start_read_btn" class="dark_btn">Read</div>
+    </div>
+    <div id="message_wrap">
+      <div id="message_area">
+        <h1>pPARROT_v.0.0.6x</h1><br>
+      </div>
+    </div>
+    <div class="menu_bottom">
+      <div id="WRITE">
+        <input type="text" id="write_content" value="Message Content">
+        <input type="text" id="write_password" value="Password123!">
+        <!--<input type="password" id="write_password" value="Password"><br>
+        <input type="password" id="write_password" value="Password"><br>
+        POSSIBLY GOING TO INCLUDE PASSWORD MATCHING VALIDATION-->
+        <input type="number" id="write_kl" value="25"><br>
+        <div id="write_message_btn" class="dark_btn">GO</div>
+      </div>
+      <div id="READ">
+        <input type="text" id="read_key" value="PUBLIC KEY">
+        <input type="password" id="read_password" value="Password123!"><br>
+        <div id="read_message_btn" class="dark_btn">GO</div>
+      </div>
+    </div>
+  </div>
+  <div id="footer"><span class="footer_link" id="info_btn">Infomation</span> | <span class="footer_link" id="source_btn">Source Code</span> | <span class="footer_link" id="api_btn">API</span> | <span class="footer_link" id="noJS_btn">No Javascript?</span></div>
+</div>
+<script src="JS/front.js"></script>
