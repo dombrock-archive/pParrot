@@ -1,6 +1,0 @@
-Move to using prepared statements on ALL sql queries. 
-SQL injection can currently lead to accessing the oldest entry in the database, you will still need a password to get in since they are hashed. 
-Create a client side encryption solution for storing messages.
-Add a non-Javascript version (pure php, no ajax).
-Document and improve the API.
-Organize front-end css.
