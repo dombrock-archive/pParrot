@@ -25,44 +25,76 @@ $info_text = "pParrot is an open source secure messaging platform. It works but 
         });
     });
   });
+
 //init
   $("#READ").hide();
   $("#WRITE").hide();
+  
 //buttons
   $("#start_read_btn").click(function(){
-    $("#start_read_btn").addClass("active_btn");
-    $("#start_write_btn").removeClass("active_btn");
+	//hide message area to bring user's focus back to input area
+	$("#message_area").hide("slow",function(){
+		$("#message_area").html("");
+	});	  
+	setActiveBtn($("#start_read_btn"));
     $("#WRITE").fadeOut("slow", function() {
       $("#READ").fadeIn("slow");
     });
   });
+  
   $("#start_write_btn").click(function(){
-    $("#start_write_btn").addClass("active_btn");
-    $("#start_read_btn").removeClass("active_btn");
+	
+	//hide message area to bring user's focus back to input area
+	$("#message_area").hide("slow",function(){
+		$("#message_area").html("");
+	});
+	setActiveBtn($("#start_write_btn"));
     $("#READ").fadeOut("slow", function() {
       $("#WRITE").fadeIn("slow");
     });
   });
+  
   $("#info_btn").click(function(){
-    $("#start_read_btn").removeClass("active_btn");
-    $("#start_write_btn").removeClass("active_btn");
-    $("#message_area").hide("slow", function() {
-          $("#message_area").html($info_text);
-          $("#message_area").show('slow');
-    });
+	// if info_btn is not active, perform the below
+	if( !$("#info_btn").hasClass("active_btn")){
+		//add active_btn class to track if info is currently shown
+		setActiveBtn($("#info_btn"));
+		$("#message_area").hide("slow", function() {
+			  $("#message_area").html($info_text);
+			  $("#message_area").show('slow');
+		});		
+	}
+
   });
+  
+  
   $("#logo").click(function(){
-    $("#start_read_btn").removeClass("active_btn");
-    $("#start_write_btn").removeClass("active_btn");
-    $("#message_area").toggle("fast");
+	setActiveBtn();
+	//hide message area 
+	$("#message_area").hide("slow",function(){
+		$("#message_area").html("");
+	});
   });
+  
   $("#source_btn").click(function(){
     alert("Coming To GITHUB Soon!");
   });
+  
   $("#api_btn").click(function(){
     alert("Coming To GITHUB Soon!");
   });
+  
   $("#noJS_btn").click(function(){
     alert("Coming Soon!");
   });
 
+  // handles activating & deactivating of buttons
+  // accepts jQuery object to be set to active
+  function setActiveBtn($newActive){
+	$(".active_btn").removeClass("active_btn");
+	$("#READ").hide();
+	$("#WRITE").hide();
+	if($newActive){
+		$newActive.addClass("active_btn");
+	}
+  }

@@ -10,24 +10,42 @@
       <div id="start_read_btn" class="dark_btn">Read</div>
     </div>
     <div id="message_wrap">
+		<h1>pPARROT_v.0.0.6x</h1>
       <div id="message_area">
-        <h1>pPARROT_v.0.0.6x</h1><br>
+        
       </div>
     </div>
     <div class="menu_bottom">
       <div id="WRITE">
-        <input type="text" id="write_content" value="Message Content">
-        <input type="text" id="write_password" value="Password123!">
+		<div class="div_menu">
+			<label>Message</label><br>
+			<input type="text" id="write_content" placeholder="Message Content">
+		</div>
+		<div class="div_menu">
+			<label>Password</label><br>
+			<input type="text" id="write_password" placeholder="Password123!">			
+		</div>
+		<div class="div_menu">
+			<label>Key Length</label><br>
+			<input type="number" id="write_kl" value="25">
+		</div>
+
         <!--<input type="password" id="write_password" value="Password"><br>
         <input type="password" id="write_password" value="Password"><br>
         POSSIBLY GOING TO INCLUDE PASSWORD MATCHING VALIDATION-->
-        <input type="number" id="write_kl" value="25"><br>
-        <div id="write_message_btn" class="dark_btn">GO</div>
+        <div id="write_message_btn" class="dark_btn go_btn">GO</div>
       </div>
       <div id="READ">
-        <input type="text" id="read_key" value="PUBLIC KEY">
-        <input type="password" id="read_password" value="Password123!"><br>
-        <div id="read_message_btn" class="dark_btn">GO</div>
+		<div class="div_menu">
+			<label>Public Key</label><br>
+			<input type="text" id="read_key" placeholder="Public Key">
+		</div>	  
+		<div class="div_menu">
+			<label>Password</label><br>
+			<input type="password" id="read_password" placeholder="Password123!">
+		</div>	  
+        
+        <div id="read_message_btn" class="dark_btn go_btn">GO</div>
       </div>
     </div>
   </div>
