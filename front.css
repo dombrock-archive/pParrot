@@ -1,20 +1,7 @@
-.active_btn{
- background:red !important; 
-}
-body{
-  margin:0 auto;
-  background:gainsboro;
-  background: -webkit-linear-gradient(top, gainsboro , gray);
-}
 *{
   font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
 }
-#app{
-  text-align:center;
-  display:block;
-  width:100vw;
-  max-width:100%;
-}
+
 @media (max-width: 600px) {
   * {
     font-size:5vw;
@@ -23,35 +10,64 @@ body{
   width:24vw;
   }
 }
+
+body{
+  margin:0 auto;
+  background:gainsboro;
+  background: -webkit-linear-gradient(top, gainsboro , gray);
+}
+
+div.active_btn{
+ background:red !important;
+}
+/* throwing off centering
+input[type=number]{
+  width:7vw;
+}
+*/
+#app{
+  text-align:center;
+  display:block;
+  width:100vw;
+  max-width:100%;
+}
+
+#footer{
+	margin-top: 5px;
+}
+
+#logo{
+  max-width:15vw;
+  -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));
+    filter: url(#drop-shadow);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
+
+#message_area{
+  padding:2vh;
+  overflow-x:auto;
+  text-align:left;
+  display: none;
+}
+
 #message_wrap{
   background:#4f5955;
   color:white;
   width:100%;
 }
-#message_area{
-  padding:2vh;
-  overflow-x:auto;
-  text-align:left;
-}
+
 #wrap{
   text-align:center;
   max-width:1000px;
   width:90%;
   margin:0 auto;
   box-shadow:5px 5px 50px black;
+  
+  /*added color here to maintain styling after moving pPARROT header text outside of message area */
+  background:#4f5955;	
 }
-.menu_top{
-  border:5px solid #4f5955;
-  margin:0 auto;
-  min-height: 1.75em;
-  background:#B7B7B7;
-}/*better classes here*/
-.menu_bottom{
-  border:5px solid #4f5955;
-  margin:0 auto;
-  min-height: 3.5em;
-  background:#B7B7B7;
-}
+
 .dark_btn{
 text-align:center;
 display:inline-block;
@@ -65,28 +81,23 @@ transition:background 1s;
 -ms-user-select: none;      /* IE 10+ */
 user-select: none;          /* Likely future */  
 }
-#logo{
-  max-width:15vw;
-  -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));
-    filter: url(#drop-shadow);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
-    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
-}
+
 .dark_btn:hover{
    background: red;
 }
-.public_key{
- color:red; 
-}
+
 .destruct_msg{
   color:red;
 }
-input[type=number]{
-  width:7vw;
+
+.div_menu{
+	display:inline-block;
 }
+
 .footer_link:hover{
   color:red;
 }
+
 .flip{
         -moz-transform: scaleX(-1);
         -o-transform: scaleX(-1);
@@ -94,4 +105,28 @@ input[type=number]{
         transform: scaleX(-1);
         filter: FlipH;
         -ms-filter: "FlipH";
+}
+
+.go_btn{
+	width:10%;
+	margin: 5px auto 5px auto;
+	display: block !important; 
+}
+
+.menu_bottom{
+  border:5px solid #4f5955;
+  margin:0 auto;
+  min-height: 3.5em;
+  background:#B7B7B7;
+}
+
+.menu_top{
+  border:5px solid #4f5955;
+  margin:0 auto;
+  min-height: 1.75em;
+  background:#B7B7B7;
+}/*better classes here*/
+
+.public_key{
+ color:red; 
 }
